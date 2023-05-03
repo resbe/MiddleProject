@@ -6,9 +6,9 @@ import lombok.Data;
 
 @Data
 public class QnaVO {
-	private int qId;
-	private String UId;
-	private String qTitle;
-	private String qCT;
-	private Date qDate;
+	private int postId;
+	private String userId;
+	private String postTitle;
+	private String postCT;
+	private Date postDate;
 }

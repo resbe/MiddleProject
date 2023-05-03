@@ -20,11 +20,10 @@ public class QnaListControl implements Control {
 		String pageStr = req.getParameter("page");
 		pageStr = pageStr ==null ? "1" : pageStr;
 		int page = Integer.parseInt(pageStr);
-		
+		System.out.println(page);
 		QnaService service = new QnaServiceImpl();
 		int total = service.totalQnaCount();
 		List<QnaVO> list = service.qnaList(page);
-		
 		System.out.println(list);
 		PageDTO dto = new PageDTO(page,total);
 		req.setAttribute("list", list);
